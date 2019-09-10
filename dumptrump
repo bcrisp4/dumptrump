@@ -12,6 +12,7 @@ Uses the API provided by "What does Trump think?" to obtain quotes
 import argparse
 import requests
 from requests.exceptions import HTTPError
+from argparse import RawTextHelpFormatter
 
 api_base_uri = 'https://api.whatdoestrumpthink.com/api/v1'
 api_random_quote_endpoint = 'quotes/random'
@@ -60,7 +61,7 @@ def main():
   else:
     print "Damn... Looks like Trump ran out of things to say... (Couldn't retrieve a quote)"
   
-parser = argparse.ArgumentParser(description='Dump a Trump quote (and optionally some ASCII art of Trump\'s ugly mug.)')
+parser = argparse.ArgumentParser(description='Dump a Trump quote (and optionally some ASCII art of his ugly mug.)\n\nBen Crisp (2019)', formatter_class=RawTextHelpFormatter)
 parser.add_argument('--mug', help='Print Trump\'s ugly mug', action='store_true')
 args = parser.parse_args()
 
