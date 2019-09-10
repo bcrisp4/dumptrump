@@ -35,7 +35,7 @@ def get_quote(api_base_uri, api_random_quote_endpoint):
     data = r.json()
     quote = data['message']
   
-    caption = '\n\n  - Donald J. Trump\n\n'
+    caption = '\n\n    - Donald J. Trump\n\n'
   
     output = '\n \"' + quote + '\"' + caption 
 
