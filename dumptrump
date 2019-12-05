@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 ''' dumptrump
@@ -56,10 +56,10 @@ def main():
 
   if quote:
     if args.mug:
-      print trump
-    print quote
+      print(trump)
+    print(quote)
   else:
-    print "Damn... Looks like Trump ran out of things to say... (Couldn't retrieve a quote)"
+    print("Looks like Trump ran out of things to say... (Couldn't retrieve a quote)")
   
 parser = argparse.ArgumentParser(description='Dump a Trump quote (and optionally some ASCII art of his ugly mug.)\n\nBen Crisp (2019)', formatter_class=RawTextHelpFormatter)
 parser.add_argument('--mug', help='Print Trump\'s ugly mug', action='store_true')
